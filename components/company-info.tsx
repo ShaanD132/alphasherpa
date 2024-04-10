@@ -25,7 +25,7 @@ export default function CompanyInfo() {
   return(
     <Container id="company" mt={5}>
       <Box>
-        <Card>
+        <Card bg="#2f3747">
           <Box display={"flex"} gap={10} justifyContent={"center"} justifyItems={"center"} mt={5}>
 
           <Box>
@@ -34,7 +34,7 @@ export default function CompanyInfo() {
             </Box>
 
           </Box>
-          <Image src="images/logo.png" width={"auto"} height={50} />
+          <Image src="images/logo.png" alt="abc logo" width={"auto"} height={50} />
           </Box>
 
           <CardBody fontSize="lg">
