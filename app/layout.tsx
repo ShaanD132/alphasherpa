@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Providers } from "@/lib/providers";
+import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Alpha Sherpa Capital",
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
+        <Navbar/>
         {children}
         </Providers>
       </body>
