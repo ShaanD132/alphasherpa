@@ -11,7 +11,7 @@ interface Data {
 }
 
 export default function CandleGraph() {
-  const chartRef = useRef(null)
+  const chartRef = useRef<HTMLDivElement>(null)
   const [data, setData] = useState<Data[]>([])
   const [keys, setKeys] = useState<string[]>(["2000-01-01"])
   const [isLoading, setLoading] = useState(true)
@@ -42,9 +42,11 @@ export default function CandleGraph() {
 
   useEffect(() => {
     fetcher()
-    if (chartRef !== null) {
+    if (chartRef !== null && chartRef.current !== null) {
       const handleResize = () => {
-        chart.applyOptions({ width: chartRef.current.clientWidth });
+        if (chartRef !== null && chartRef.current !== null) {
+          chart.applyOptions({ width: chartRef.current.clientWidth });
+        }
       }
       const chart = createChart(chartRef.current, {
         layout: {
