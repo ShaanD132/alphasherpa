@@ -1,7 +1,5 @@
 import { Badge, Box, Card, CardBody, CardHeader, Container, Heading, Image, Text } from "@chakra-ui/react";
 
-
-
 export default function CompanyInfo() {
   var data = require("@/data/company_info.json")["data"]
   var badges: string[] = [data["gics1"]]
@@ -25,7 +23,7 @@ export default function CompanyInfo() {
   return(
     <Container id="company" mt={5}>
       <Box>
-        <Card bg="#2f3747">
+        <Card bg="#2f3747" color="#EEE5E9">
           <Box display={"flex"} gap={10} justifyContent={"center"} justifyItems={"center"} mt={5}>
 
           <Box>
